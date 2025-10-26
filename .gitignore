@@ -1,0 +1,9 @@
+# Node modules
+node_modules/
+
+# Dossier de build
+dist/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
