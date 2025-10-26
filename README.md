@@ -69,6 +69,8 @@ Une interface console s'ouvre :
 ## 💡 Les limtes de cette version
 
 - ❌ Toujours pas de gestion d’utilisateur ou de permissions (tout le monde peut emprunter/retourner).
+- ❌ Pas de suppression de livre.
+- ❌ Exemplaire livre unique : pas de notion de stock par exemplaire.
 - ❌ Pas d’interface Web complète : seule la console est fonctionnelle.
 - ❌ La persistence est encore locale (SQLite), pas de support pour un vrai serveur ou base distante.
 - ❌ Pas encore de tests automatisés pour toutes les couches (DAO, Service, Interface).
