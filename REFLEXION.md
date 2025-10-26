@@ -116,3 +116,48 @@ On pourrait **améliorer la flexibilité et la maintenabilité** en introduisant
 - Meilleure extensibilité (changement de SGBD facile)  
 - Tests unitaires facilités (possibilité de simuler un faux repository en mémoire)  
 - Respect du principe **Dependency Inversion** (SOLID)
+
+## Graphique 2-tiers
+
+```mermaid
+graph TD
+    subgraph COUCHE_CLIENT
+        style COUCHE_CLIENT fill:#f9f,stroke:#333,stroke-width:2px
+        IULM1[Interface Utilisateur]
+        IULM2[Logique Métier]
+        IULM1 --> IULM2
+    end
+
+    subgraph COUCHE_SERVEUR_DONNEES
+        style COUCHE_SERVEUR_DONNEES fill:#bbf,stroke:#333,stroke-width:2px
+        BD[Base de Données]
+    end
+
+    IULM2 --> BD
+```
+![mermaid-diagram-2tiers](mermaid-diagram-2tiers.png)
+
+
+## Graphique 3-tiers
+
+```mermaid
+graph TD
+    subgraph COUCHE_CLIENT
+        style COUCHE_CLIENT fill:#f9f,stroke:#333,stroke-width:2px
+        IU[Interface Utilisateur]
+    end
+
+    subgraph COUCHE_MÉTIER
+        style COUCHE_MÉTIER fill:#ffc,stroke:#333,stroke-width:2px
+        LM[Logique Métier / Service]
+    end
+
+    subgraph COUCHE_SERVEUR_DONNEES
+        style COUCHE_SERVEUR_DONNEES fill:#bbf,stroke:#333,stroke-width:2px
+        BD[Base de Données]
+    end
+
+    IU --> LM
+    LM --> BD
+```
+![mermaid-diagram-3tiers](mermaid-diagram-3tiers.png)
